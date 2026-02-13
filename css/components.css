@@ -109,8 +109,18 @@
   opacity: 0.3;
 }
 
+.testimonial__image {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-medium);
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
 .testimonial__quote {
   font-style: italic;
+  margin-top: 1.5rem;
   margin-bottom: var(--space-md);
   position: relative;
   z-index: 1;
