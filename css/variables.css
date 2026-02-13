@@ -1,12 +1,13 @@
 /* Design System - CSS Custom Properties */
 
 :root {
-  /* Colors - Classic & Professional Palette */
+  /* Colors - Royal Blue & Black Palette (matches logo) */
   --color-primary-text: #2c2c2c;
   --color-secondary-text: #6b6b6b;
   --color-background: #fafaf8;
-  --color-accent: #8b7355;
-  --color-accent-dark: #6b5843;
+  --color-accent: #1a3a8f;
+  --color-accent-dark: #0f2766;
+  --color-accent-light: #e8edf7;
   --color-border: #e0ddd8;
   --color-overlay: rgba(0, 0, 0, 0.92);
   --color-white: #ffffff;
