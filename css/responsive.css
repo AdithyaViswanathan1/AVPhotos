@@ -1,0 +1,248 @@
+/* Responsive Design - Mobile-First Approach */
+
+/* Mobile Devices (< 768px) */
+@media (max-width: 767px) {
+  /* Typography */
+  :root {
+    --font-size-h1: 2.5rem;      /* 40px */
+    --font-size-h2: 2rem;        /* 32px */
+    --font-size-h3: 1.5rem;      /* 24px */
+    --font-size-body: 1rem;      /* 16px */
+  }
+
+  /* Container */
+  .container {
+    padding: 0 var(--space-sm);
+  }
+
+  /* Sections */
+  .section {
+    padding: var(--space-xl) 0;
+  }
+
+  .section--hero {
+    padding: var(--space-xl) 0 var(--space-lg);
+  }
+
+  /* Header Navigation */
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--color-white);
+    flex-direction: column;
+    gap: 0;
+    padding: var(--space-xl) 0;
+    box-shadow: var(--shadow-large);
+    transition: right var(--transition-normal);
+    z-index: 999;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .nav__link {
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav__link::after {
+    display: none;
+  }
+
+  /* Mobile Menu Toggle */
+  .menu-toggle {
+    display: flex;
+    z-index: 1000;
+  }
+
+  .menu-toggle.active .menu-toggle__bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .menu-toggle.active .menu-toggle__bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .menu-toggle__bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* Mobile Menu Overlay */
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-normal), visibility var(--transition-normal);
+    z-index: 998;
+  }
+
+  .nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Gallery Grid - Single column on mobile, preserve aspect ratios */
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .gallery__item[data-aspect="landscape"],
+  .gallery__item[data-aspect="portrait"],
+  .gallery__item[data-aspect="square"] {
+    grid-column: span 1;
+  }
+
+  .gallery__image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Hero */
+  .hero__phone {
+    font-size: 1.25rem;
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  /* About Profile */
+  .about-profile {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  /* Footer */
+  .footer__content {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    text-align: center;
+  }
+
+  /* Buttons */
+  .btn--large {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: 1rem;
+  }
+}
+
+/* Tablet Devices (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Typography */
+  :root {
+    --font-size-h1: 3rem;        /* 48px */
+    --font-size-h2: 2.25rem;     /* 36px */
+  }
+
+  /* Gallery Grid - 2 columns on tablet */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Landscape spans full row on tablet, portrait 2 per row */
+  .gallery__item[data-aspect="landscape"] {
+    grid-column: span 2;
+  }
+
+  .gallery__item[data-aspect="portrait"],
+  .gallery__item[data-aspect="square"] {
+    grid-column: span 1;
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  /* Gallery Grid - 4 columns: portrait 4/row, landscape 2/row */
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Larger spacing */
+  .section {
+    padding: var(--space-3xl) 0;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Ensure images look sharp on retina displays */
+  .gallery__image,
+  .lightbox__image {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Landscape Mode on Mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .section--hero {
+    padding: var(--space-lg) 0;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .header,
+  .footer,
+  .nav,
+  .menu-toggle,
+  .btn,
+  .lightbox {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10mm;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark Mode Support (future enhancement) */
+@media (prefers-color-scheme: dark) {
+  /* Dark mode styles can be added here if desired */
+  /* For now, we maintain the light classic portfolio aesthetic */
+}

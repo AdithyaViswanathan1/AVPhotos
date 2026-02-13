@@ -1,0 +1,242 @@
+/* Component Styles */
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-small);
+  cursor: pointer;
+  text-align: center;
+  transition: all var(--transition-fast);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn--primary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: 2px solid var(--color-accent);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.btn--large {
+  padding: var(--space-md) var(--space-xl);
+  font-size: 1.125rem;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: var(--space-3xl) 0;
+}
+
+.hero__title {
+  margin-bottom: var(--space-sm);
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  color: var(--color-secondary-text);
+  margin-bottom: var(--space-lg);
+}
+
+.hero__cta {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.hero__phone {
+  font-family: var(--font-ui);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+/* Testimonial Cards */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.testimonial-card {
+  background-color: var(--color-white);
+  padding: var(--space-lg);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-small);
+  transition: box-shadow var(--transition-normal);
+  position: relative;
+}
+
+.testimonial-card:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+.testimonial-card::before {
+  content: '"';
+  font-family: var(--font-heading);
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--color-border);
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  opacity: 0.3;
+}
+
+.testimonial__quote {
+  font-style: italic;
+  margin-bottom: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial__author {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  color: var(--color-primary-text);
+  margin-bottom: var(--space-xs);
+}
+
+.testimonial__event {
+  font-size: var(--font-size-small);
+  color: var(--color-secondary-text);
+}
+
+/* FAQ Accordion */
+.faq-list {
+  max-width: 800px;
+  margin: var(--space-xl) auto 0;
+}
+
+.faq-item {
+  background-color: var(--color-white);
+  border-radius: var(--radius-medium);
+  margin-bottom: var(--space-md);
+  box-shadow: var(--shadow-small);
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md);
+  font-family: var(--font-ui);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-primary-text);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color var(--transition-fast);
+}
+
+.faq-question:hover {
+  background-color: var(--color-background);
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-accent);
+  transition: transform var(--transition-fast);
+}
+
+.faq-question.active::after {
+  content: '−';
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal);
+}
+
+.faq-answer.active {
+  max-height: 500px;
+}
+
+.faq-answer__content {
+  padding: 0 var(--space-md) var(--space-md);
+  color: var(--color-secondary-text);
+  line-height: 1.6;
+}
+
+/* Contact Info */
+.contact-info {
+  text-align: center;
+  padding: var(--space-xl);
+  background-color: var(--color-white);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-small);
+}
+
+.contact-info__phone {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: var(--space-md) 0;
+}
+
+.contact-info__phone a {
+  color: inherit;
+}
+
+.contact-info__phone a:hover {
+  color: var(--color-accent-dark);
+  text-decoration: none;
+}
+
+/* About Profile */
+.about-profile {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-xl);
+  align-items: start;
+  margin-top: var(--space-xl);
+}
+
+.about-profile__image {
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-medium);
+  width: 100%;
+}
+
+.about-profile__content h2 {
+  margin-bottom: var(--space-md);
+}
+
+.about-profile__content p {
+  margin-bottom: var(--space-md);
+  color: var(--color-secondary-text);
+}

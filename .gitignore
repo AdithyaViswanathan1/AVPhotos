@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Development
+.vscode/
+.idea/
+*.log
+
+# Source images (too large for git - keep only optimized versions)
+source-images/
