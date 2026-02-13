@@ -40,10 +40,14 @@
 }
 
 .header__logo {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-primary-text);
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  height: 8vh;
+  width: auto;
+  display: block;
 }
 
 /* Navigation */
@@ -147,6 +151,14 @@
 
 .gallery__item:hover .gallery__image {
   transform: scale(1.05);
+}
+
+/* Footer Logo */
+.footer__logo {
+  height: 150px;
+  width: auto;
+  display: block;
+  margin: 0 auto var(--space-md);
 }
 
 /* Footer */
