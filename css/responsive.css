@@ -21,7 +21,7 @@
   }
 
   .section--hero {
-    padding: var(--space-xl) 0 var(--space-lg);
+    padding: var(--space-lg) 0 var(--space-md);
   }
 
   /* Header - allow nav to wrap to second row */
@@ -201,7 +201,7 @@
 /* Landscape Mode on Mobile */
 @media (max-width: 767px) and (orientation: landscape) {
   .section--hero {
-    padding: var(--space-lg) 0;
+    padding: var(--space-md) 0;
   }
 
   .hero__title {

@@ -95,7 +95,7 @@ small,
   font-size: 1.25rem;
   line-height: 1.6;
   color: var(--color-secondary-text);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 /* Text Utilities */

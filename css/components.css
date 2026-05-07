@@ -59,14 +59,14 @@
 .hero__subtitle {
   font-size: 1.25rem;
   color: var(--color-secondary-text);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 .hero__cta {
   display: inline-flex;
   flex-direction: column;
   gap: var(--space-sm);
-  margin-top: var(--space-md);
+  margin-top: var(--space-sm);
 }
 
 .hero__phone {
