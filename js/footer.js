@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <h4>Quick Links</h4>
           <p><a href="index.html">Home</a></p>
           <p><a href="about.html">About</a></p>
+          <p><a href="dance-vocal.html">Dance/Vocal</a></p>
           <p><a href="testimonials.html">Testimonials</a></p>
           <p><a href="faq.html">FAQ</a></p>
         </div>

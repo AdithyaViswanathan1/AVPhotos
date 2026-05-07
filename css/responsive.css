@@ -163,6 +163,10 @@
     grid-column: span 1;
   }
 
+  .gallery--vocal .gallery__item--featured {
+    grid-column: span 2;
+  }
+
   /* Testimonials */
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -175,6 +179,7 @@
   .gallery {
     grid-template-columns: repeat(4, 1fr);
   }
+
 }
 
 /* Large Desktop (1440px+) */

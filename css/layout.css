@@ -153,6 +153,17 @@
   transform: scale(1.05);
 }
 
+.gallery--vocal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gap);
+  align-items: start;
+}
+
+.gallery--vocal .gallery__item--featured {
+  grid-column: span 2;
+}
+
 /* Footer Logo */
 .footer__logo {
   height: 150px;
