@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Dance and Vocal photography gallery by AV Photos in DFW.">
-  <title>Dance/Vocal - AV Photos</title>
+  <title>Pictures - AV Photos</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -29,7 +29,7 @@
       <nav class="nav">
         <a href="index.html" class="nav__link">Home</a>
         <a href="about.html" class="nav__link">About</a>
-        <a href="dance-vocal.html" class="nav__link">Dance/Vocal</a>
+        <a href="pictures.html" class="nav__link">Pictures</a>
         <a href="testimonials.html" class="nav__link">Testimonials</a>
         <a href="faq.html" class="nav__link">FAQ</a>
         <a href="tel:4694037497" class="nav__link">Contact</a>
@@ -47,8 +47,8 @@
   <main>
     <section class="section section--hero">
       <div class="container">
-        <h1>Dance/Vocal</h1>
-        <p class="lead">Dedicated galleries for dance and vocal moments</p>
+        <h1>Pictures</h1>
+        <p class="lead">A collection of memorable moments.</p>
       </div>
     </section>
 
@@ -89,10 +89,7 @@
             <img class="gallery__image" src="images/vocal/IMG_7.JPG" alt="Vocal performance image" loading="lazy">
           </div>
           <div class="gallery__item">
-            <img class="gallery__image gallery__image--reference" src="images/vocal/IMG_14.JPG" alt="Vocal portrait capture" loading="lazy">
-          </div>
-          <div class="gallery__item gallery__item--featured">
-            <img class="gallery__image gallery__image--match-reference" src="images/vocal/IMG-89.jpg" alt="Vocal event photo" loading="lazy">
+            <img class="gallery__image" src="images/vocal/IMG_20.JPG" alt="Vocal event photo" loading="lazy">
           </div>
           <div class="gallery__item">
             <img class="gallery__image" src="images/vocal/IMG-157.jpg" alt="Vocal candid moment" loading="lazy">
@@ -101,7 +98,7 @@
             <img class="gallery__image" src="images/vocal/IMG_12.JPG" alt="Vocal celebration shot" loading="lazy">
           </div>
           <div class="gallery__item">
-            <img class="gallery__image" src="images/vocal/IMG_26.JPG" alt="Vocal gathering image" loading="lazy">
+            <img class="gallery__image" src="images/vocal/IMG_25.JPG" alt="Vocal gathering image" loading="lazy">
           </div>
           <div class="gallery__item">
             <img class="gallery__image" src="images/vocal/IMG-111.jpg" alt="Vocal session photo" loading="lazy">
@@ -118,31 +115,10 @@
   <div id="footer-placeholder"></div>
 
   <!-- JavaScript -->
-  <script src="js/footer.js"></script>
+  <script src="js/footer.js?v=2"></script>
   <script src="js/navigation.js"></script>
   <script src="js/lightbox.js"></script>
   <script src="js/lazyload.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    (function () {
-      function matchVocalImageHeight() {
-        var reference = document.querySelector('.gallery--vocal .gallery__image--reference');
-        var target = document.querySelector('.gallery--vocal .gallery__image--match-reference');
-        if (!reference || !target) return;
-
-        var referenceHeight = Math.round(reference.getBoundingClientRect().height);
-        if (!referenceHeight) return;
-
-        target.style.height = referenceHeight + 'px';
-        target.style.width = 'auto';
-        target.style.maxWidth = 'none';
-        target.style.objectFit = 'contain';
-      }
-
-      window.addEventListener('load', matchVocalImageHeight);
-      window.addEventListener('resize', matchVocalImageHeight);
-      setTimeout(matchVocalImageHeight, 200);
-    })();
-  </script>
 </body>
 </html>
