@@ -46,6 +46,20 @@
   font-size: 1.125rem;
 }
 
+/* Pictures page — in-page jump links under hero */
+.pictures-jump {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.pictures-jump__link {
+  text-decoration: none;
+  min-width: 8rem;
+}
+
 /* Hero Section */
 .hero {
   text-align: center;

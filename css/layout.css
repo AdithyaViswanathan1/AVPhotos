@@ -18,6 +18,13 @@
   text-align: center;
 }
 
+/* Anchor targets clear sticky header */
+#dance,
+#vocal,
+#graduation {
+  scroll-margin-top: calc(8vh + var(--space-md) * 2);
+}
+
 /* Header */
 .header {
   background-color: var(--color-white);
